@@ -8,18 +8,13 @@ import org.example.reader.PropertyReader;
 import org.example.reader.RuleReader;
 import org.example.validator.CsvValidator;
 
-import java.io.IOException;
 import java.util.List;
 
 import static org.example.RuleSolver.RuleSolver.solveRule;
 
-/*
- * TODO Сделать чтобы в CSV игнорился регистр
- * */
-
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         PropertyReader propertyReader = new PropertyReader();
         RuleReader ruleReader = new RuleReader();
         List<Property> properties = propertyReader.readProperties("src/main/resources/properties.json");

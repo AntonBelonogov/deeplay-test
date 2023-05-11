@@ -10,8 +10,13 @@ import java.util.List;
 
 public class RuleReader {
 
-    public List<Rule> readRules(String filename) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        return mapper.readValue(new File(filename), JsonFile.class).getRules();
+    public List<Rule> readRules(String filename) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            return mapper.readValue(new File(filename), JsonFile.class).getRules();
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+        return null;
     }
 }

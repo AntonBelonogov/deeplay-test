@@ -4,6 +4,7 @@ import org.example.model.Animal;
 import org.example.model.setting.Condition;
 import org.example.model.setting.Rule;
 
+import java.lang.reflect.Field;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,23 +17,28 @@ public class RuleSolver {
             String conditionProperty = condition.getProperty();
             Object values = condition.getValue();
             List<String> conditionValues = valuesToList(values);
+            Field field = getClassType(animals, conditionProperty);
             animalList = animalList.stream().filter(animal -> {
-                boolean isValid = true;
-                switch (conditionProperty) {
-                    case "weight":
-                        isValid = conditionValues.contains(animal.getWeight());
-                        break;
-                    case "height":
-                        isValid = conditionValues.contains(animal.getHeight());
-                        break;
-                    case "type":
-                        isValid = conditionValues.contains(animal.getType());
-                        break;
+                try {
+                    return conditionValues.contains((String) field.get(animal));
+                } catch (IllegalAccessException e) {
+                    throw new RuntimeException(e);
                 }
-                return isValid;
             }).collect(Collectors.toList());
         }
         return String.format("Rule name: %s, count: %d", ruleName, animalList.size());
+    }
+
+    private static Field getClassType(List<Animal> animals, String conditionProperty) {
+        try {
+            Class<?> myClass = animals.stream().findFirst().get().getClass();
+            Field field = myClass.getDeclaredField(conditionProperty);
+            field.setAccessible(true);
+            return field;
+        } catch (NoSuchFieldException noSuchFieldException) {
+            noSuchFieldException.printStackTrace();
+        }
+        return null;
     }
 
     private static List<String> valuesToList(Object values) {

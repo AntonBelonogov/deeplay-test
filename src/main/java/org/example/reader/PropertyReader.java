@@ -14,8 +14,13 @@ import java.util.List;
 
 
 public class PropertyReader {
-    public List<Property> readProperties(String filename) throws IOException {
-        ObjectMapper mapper = new ObjectMapper();
-        return mapper.readValue(new File(filename), JsonFile.class).getProperties();
+    public List<Property> readProperties(String filename) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            return mapper.readValue(new File(filename), JsonFile.class).getProperties();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }

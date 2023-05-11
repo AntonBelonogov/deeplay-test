@@ -12,11 +12,16 @@ import java.util.List;
 public class AnimalReader {
     private static final CsvMapper csvMapper = new CsvMapper();
     private static final CsvSchema csvSchema = CsvSchema.emptySchema().withHeader();
-    public static List<Animal> readEntity(String csvFile) throws IOException {
-        MappingIterator<Animal> animalIterator = csvMapper.readerWithSchemaFor(Animal.class)
-                .with(csvSchema)
-                .readValues(new File(csvFile));
-        return animalIterator.readAll();
+    public static List<Animal> readEntity(String csvFile) {
+        try {
+            MappingIterator<Animal> animalIterator = csvMapper.readerWithSchemaFor(Animal.class)
+                    .with(csvSchema)
+                    .readValues(new File(csvFile));
+            return animalIterator.readAll();
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
+        return null;
     }
 
 }
