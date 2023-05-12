@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d0289cf-f79d-4e8d-8a28-99b3bee254b0" name="Changes" comment="Сделана тестовая модель">
+    <list default="true" id="4d0289cf-f79d-4e8d-8a28-99b3bee254b0" name="Changes" comment="ref: Убрана привязка к конкретной сущности внутри логики расчета.">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RuleSolver/RuleSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RuleSolver/RuleSolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/reader/PropertyReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reader/PropertyReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RuleSolver/RuleSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ruleSolver/RuleSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/reader/AnimalReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reader/AnimalReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/validator/CsvValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/validator/CsvValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,15 +37,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/russi/Desktop/java-shareit-project"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/russi/Desktop/java-shareit-project&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.example.model" />
@@ -55,6 +58,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="deeplay-test" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;src/main/resources/properties.json&quot; &quot;src/main/resources/data.csv&quot; &quot;src/main/resources/rules.json&quot;" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
@@ -81,7 +85,8 @@
       <updated>1683628866454</updated>
       <workItem from="1683628869018" duration="5429000" />
       <workItem from="1683700983021" duration="21139000" />
-      <workItem from="1683775322728" duration="22270000" />
+      <workItem from="1683775322728" duration="22683000" />
+      <workItem from="1683876283620" duration="9162000" />
     </task>
     <task id="LOCAL-00001" summary="Сделана тестовая модель">
       <created>1683826537916</created>
@@ -97,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683826789926</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ref: Убрана привязка к конкретной сущности внутри логики расчета.">
+      <created>1683829649362</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683829649362</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Сделана тестовая модель" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделана тестовая модель" />
+    <MESSAGE value="ref: Убрана привязка к конкретной сущности внутри логики расчета." />
+    <option name="LAST_COMMIT_MESSAGE" value="ref: Убрана привязка к конкретной сущности внутри логики расчета." />
   </component>
 </project>

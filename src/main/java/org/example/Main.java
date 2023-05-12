@@ -10,25 +10,22 @@ import org.example.validator.CsvValidator;
 
 import java.util.List;
 
-import static org.example.RuleSolver.RuleSolver.solveRule;
+import static org.example.ruleSolver.RuleSolver.solveRule;
 
+/*
+* При запуске использовать файл строку args: "src/main/resources/properties.json" "src/main/resources/data.csv" "src/main/resources/rules.json"
+* */
 
 public class Main {
     public static void main(String[] args) {
         PropertyReader propertyReader = new PropertyReader();
         RuleReader ruleReader = new RuleReader();
-        List<Property> properties = propertyReader.readProperties("src/main/resources/properties.json");
 
+        List<Property> properties = propertyReader.readProperties(args[0]);
         CsvValidator csvValidator = new CsvValidator(properties);
-
-        List<String> animalHeader = csvValidator.getHeaderProperties();
-
-        List<Animal> animals = AnimalReader.readEntity("src/main/resources/data.csv");
-
-        List<Rule> rules = ruleReader.readRules("src/main/resources/rules.json");
-
-        for (Rule rule : rules) {
-            System.out.println(solveRule(rule, animals));
-        }
+        List<Animal> animals = AnimalReader.readEntity(args[1], csvValidator);
+        csvValidator.validateEntity(animals);
+        List<Rule> rules = ruleReader.readRules(args[2]);
+        rules.forEach(rule -> solveRule(rule, animals));
     }
 }
