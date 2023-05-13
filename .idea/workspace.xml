@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d0289cf-f79d-4e8d-8a28-99b3bee254b0" name="Changes" comment="ref: Убрана привязка к конкретной сущности внутри логики расчета.">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="4d0289cf-f79d-4e8d-8a28-99b3bee254b0" name="Changes" comment="ref: Сделана проверка по properties.json для Animal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RuleSolver/RuleSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ruleSolver/RuleSolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/reader/AnimalReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reader/AnimalReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/validator/CsvValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/validator/CsvValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ruleSolver/RuleSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ruleSolver/RuleSolver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +82,8 @@
       <workItem from="1683628869018" duration="5429000" />
       <workItem from="1683700983021" duration="21139000" />
       <workItem from="1683775322728" duration="22683000" />
-      <workItem from="1683876283620" duration="9162000" />
+      <workItem from="1683876283620" duration="9604000" />
+      <workItem from="1683972390290" duration="1749000" />
     </task>
     <task id="LOCAL-00001" summary="Сделана тестовая модель">
       <created>1683826537916</created>
@@ -109,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683829649362</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ref: Сделана проверка по properties.json для Animal">
+      <created>1683888905445</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683888905445</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +133,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Сделана тестовая модель" />
     <MESSAGE value="ref: Убрана привязка к конкретной сущности внутри логики расчета." />
-    <option name="LAST_COMMIT_MESSAGE" value="ref: Убрана привязка к конкретной сущности внутри логики расчета." />
+    <MESSAGE value="ref: Сделана проверка по properties.json для Animal" />
+    <option name="LAST_COMMIT_MESSAGE" value="ref: Сделана проверка по properties.json для Animal" />
   </component>
 </project>

@@ -30,7 +30,6 @@ public class AnimalReader {
                     throw new IllegalArgumentException("Invalid value for field.");
                 }
                 animalList.add(animal);
-
             }
             return animalList;
         } catch (IOException exception) {

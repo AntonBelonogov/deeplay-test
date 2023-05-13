@@ -9,16 +9,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class RuleSolver {
-    public static void solveRule(Rule rule, List<Animal> animals) {
+    public static void solveRule(Rule rule, List<?> list) {
         String ruleName = rule.getName();
         List<Condition> ruleCondition = rule.getCondition();
-        List<Animal> animalList = List.copyOf(animals);
+        List<?> copyList = List.copyOf(list);
         for (Condition condition : ruleCondition) {
             String conditionProperty = condition.getProperty();
             Object values = condition.getValue();
             List<String> conditionValues = valuesToList(values);
-            Field field = getClassType(animals, conditionProperty);
-            animalList = animalList.stream().filter(animal -> {
+            Field field = getClassType(list, conditionProperty);
+            copyList = copyList.stream().filter(animal -> {
                 try {
                     return conditionValues.contains((String) field.get(animal));
                 } catch (IllegalAccessException e) {
@@ -26,7 +26,7 @@ public class RuleSolver {
                 }
             }).collect(Collectors.toList());
         }
-        System.out.println(String.format("Rule name: %s, count: %d", ruleName, animalList.size()));
+        System.out.println(String.format("Rule name: %s, count: %d", ruleName, copyList.size()));
     }
 
     private static Field getClassType(List<?> list, String conditionProperty) {
