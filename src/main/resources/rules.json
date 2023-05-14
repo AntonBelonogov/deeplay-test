@@ -1,45 +1,45 @@
-{
-  "rules": [
-    {
-      "name": "countHerbivores",
-      "condition": [
-        {
-          "property": "type",
-          "value": "Травоядное"
-        }
-      ]
-    },
-    {
-      "name": "countSmallHerbivoresOrCarnivores",
-      "condition": [
-        {
-          "property": "type",
-          "value": [
-            "Травоядное",
-            "Плотоядное"
-          ]
-        },
-        {
-          "property": "height",
-          "value": "Маленькое"
-        }
-      ]
-    },
-    {
-      "name": "countOmnivoresNotTall",
-      "condition": [
-        {
-          "property": "type",
-          "value": "Всеядное"
-        },
-        {
-          "property": "height",
-          "value": [
-            "Маленькое",
-            "Невысокое"
-          ]
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "name": "Число травоядных",
+    "condition": [
+      {
+        "property": "type",
+        "type": "equals",
+        "value": "Травоядное"
+      }
+    ]
+  },
+  {
+    "name": "Число травоядных или плотоядных и они при этом маленькие",
+    "condition": [
+      {
+        "property": "type",
+        "type": "in",
+        "value": [
+          "Травоядное",
+          "Плотоядное"
+        ]
+      },
+      {
+        "property": "height",
+        "type": "equals",
+        "value": "Маленькое"
+      }
+    ]
+  },
+  {
+    "name": "Число всеядных, но не являются высокими",
+    "condition": [
+      {
+        "property": "type",
+        "type": "equals",
+        "value": "Всеядное"
+      },
+      {
+        "property": "height",
+        "type": "notEquals",
+        "value": "Высокое"
+      }
+    ]
+  }
+]

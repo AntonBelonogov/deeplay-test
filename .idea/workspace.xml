@@ -5,9 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d0289cf-f79d-4e8d-8a28-99b3bee254b0" name="Changes" comment="ref: Сделана проверка по properties.json для Animal">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/enums/ProcessorAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/execeptions/ReaderException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/processors/RulesProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/providers/DataProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/providers/JsonFileProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/rules/Condition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/processors/RulesProcessorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/rules/ConditionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/rules/RuleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/reader/AnimalReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/reader/AnimalReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ruleSolver/RuleSolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ruleSolver/RuleSolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Animal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/setting/Condition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/setting/JsonFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/setting/Property.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/setting/PropertyValue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/setting/Rule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/rules/Rule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/reader/AnimalReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/reader/PropertyReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/reader/RuleReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ruleSolver/RuleSolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/validator/CsvValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/properties.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/rules.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/rules.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +43,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -28,33 +57,54 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2PYL2uTSyFL6BoSeIIfNXM8Ay8Y" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/russi/Desktop/java-shareit-project&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "C:/Users/russi/Desktop/dev/deeplay-test/src/main/resources/test/throwsException",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.enums" />
       <recent name="org.example.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\russi\Desktop\dev\deeplay-test\src\main\resources\test\throwsException" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\russi\Desktop\dev\deeplay-test\src\main\resources\test\shouldTestWithAnotherData" />
+      <recent name="C:\Users\russi\Desktop\dev\deeplay-test\src\main\resources\test" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="org.example.model" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.processors" />
+      <recent name="org.example.rules" />
+    </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.org.example.Main">
+    <configuration name="org.example.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="deeplay-test" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;src/main/resources/properties.json&quot; &quot;src/main/resources/data.csv&quot; &quot;src/main/resources/rules.json&quot;" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.example.*" />
@@ -65,9 +115,83 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConditionTest.match" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="deeplay-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.rules.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.rules" />
+      <option name="MAIN_CLASS_NAME" value="org.example.rules.ConditionTest" />
+      <option name="METHOD_NAME" value="match" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RuleTest.matches" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="deeplay-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.rules.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.rules" />
+      <option name="MAIN_CLASS_NAME" value="org.example.rules.RuleTest" />
+      <option name="METHOD_NAME" value="matches" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RulesProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="deeplay-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.processors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.processors" />
+      <option name="MAIN_CLASS_NAME" value="org.example.processors.RulesProcessorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RulesProcessorTest.count" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="deeplay-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.processors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.processors" />
+      <option name="MAIN_CLASS_NAME" value="org.example.processors.RulesProcessorTest" />
+      <option name="METHOD_NAME" value="count" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.org.example.Main" />
+      <item itemvalue="JUnit.ConditionTest.match" />
+      <item itemvalue="JUnit.RuleTest.matches" />
+      <item itemvalue="JUnit.RulesProcessorTest" />
+      <item itemvalue="JUnit.RulesProcessorTest.count" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.org.example.Main" />
+        <item itemvalue="JUnit.RulesProcessorTest.count" />
+        <item itemvalue="JUnit.RulesProcessorTest" />
+        <item itemvalue="JUnit.RuleTest.matches" />
+        <item itemvalue="JUnit.ConditionTest.match" />
       </list>
     </recent_temporary>
   </component>
@@ -83,7 +207,8 @@
       <workItem from="1683700983021" duration="21139000" />
       <workItem from="1683775322728" duration="22683000" />
       <workItem from="1683876283620" duration="9604000" />
-      <workItem from="1683972390290" duration="1749000" />
+      <workItem from="1683972390290" duration="2420000" />
+      <workItem from="1684040730950" duration="38098000" />
     </task>
     <task id="LOCAL-00001" summary="Сделана тестовая модель">
       <created>1683826537916</created>
@@ -113,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683888905445</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ref: Сделана проверка по properties.json для Animal">
+      <created>1683983695971</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1683983695971</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,5 +267,16 @@
     <MESSAGE value="ref: Убрана привязка к конкретной сущности внутри логики расчета." />
     <MESSAGE value="ref: Сделана проверка по properties.json для Animal" />
     <option name="LAST_COMMIT_MESSAGE" value="ref: Сделана проверка по properties.json для Animal" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
