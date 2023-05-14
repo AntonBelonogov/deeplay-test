@@ -9,9 +9,6 @@ import org.example.rules.Rule;
 
 import java.util.*;
 
-//load jsonFile src/main/resources/data.json
-//process count jsonFile src/main/resources/rules.json
-
 public class Main {
 
     private final static Map<String, DataProvider> providers = Map.of("jsonFile", new JsonFileProvider());
